@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://ipc2018-temporal.bitbucket.io/ -->
+<html lang="en" class="gr__ipc2018-temporal_bitbucket_io"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IPC 2018</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="./IPC 2018_files/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="./IPC 2018_files/simple-sidebar.css" rel="stylesheet">
+
+    <link href="./IPC 2018_files/css" rel="stylesheet" type="text/css">
+</head>
+
+<body data-gr-c-s-loaded="true">
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="https://ipc2018-temporal.bitbucket.io/#">
+                        IPC 2018<br>Temporal Tracks
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ipc2018-temporal.bitbucket.io/#description">Description</a>
+                </li>
+                <li>
+                    <a href="https://ipc2018-temporal.bitbucket.io/#schedule">Schedule</a>
+                </li>
+                <li>
+                    <a href="https://ipc2018-temporal.bitbucket.io/#tracks">Tracks</a>
+                </li>
+                <li>
+                    <a href="https://ipc2018-temporal.bitbucket.io/#pddl">PDDL Fragment</a>
+                </li>
+                <li>
+                    <a href="https://ipc2018-temporal.bitbucket.io/#registration">Registration</a>
+                </li>
+                <li>
+                    <a href="https://ipc2018-temporal.bitbucket.io/#singularityfaq">Container FAQ</a>
+                </li>
+                <li>
+                    <a href="https://ipc2018-temporal.bitbucket.io/#inputoutput">Input/Output Rules</a>
+                </li>
+                <li>
+                    <a href="https://ipc2018-temporal.bitbucket.io/#calls">Calls</a>
+                </li>
+                <li>
+                    <a href="https://ipc2018-temporal.bitbucket.io/#domains">Domains</a>
+                </li>
+                <li>
+                    <a href="https://ipc2018-temporal.bitbucket.io/#planners">Planners</a>
+                </li>
+                <li>
+                    <a href="https://ipc2018-temporal.bitbucket.io/#results">Results</a>
+                </li>
+                <li>
+                    <a href="https://ipc2018-temporal.bitbucket.io/#organizers">Organizers</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <h1>International Planning Competition 2018<br>Temporal Tracks</h1>
+
+                <div id="description" class="row">
+                    <div class="col-lg-12">
+                        <p>
+                            This is the website for the temporal tracks of the
+                            IPC 2018. This is the 7th IPC containing
+                            classical tracks, since the specification
+                            of PDDL 2.1 in 2002.  In addition to the temporal
+                            tracks, the IPC also has classical and
+                            probabilistic tracks. You can find
+                            information about them on <a href="https://ipc2018.bitbucket.io/">
+                            ipc2018.bitbucket.io</a>.
+                        </p>
+                        <p>
+                            <strong>Mailing List:</strong>
+                            <a href="https://groups.google.com/d/forum/ipc2018-temporal">
+                                https://groups.google.com/d/forum/ipc2018-temporal
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div id="schedule" class="row section col-section">
+                    <div class="col-lg-12">
+                        <h2>Preliminary Schedule</h2>
+                        <table class="table">
+                            <thead><tr>
+                                <th>Event</th>
+                                <th>Date</th>
+                            </tr></thead>
+                            <tbody><tr><td>Call for domains / expression of interest</td>
+                                <td>June 22, 2017</td></tr>
+                            <tr><td>Domain submission deadline</td>
+                                <td>November, 2017</td></tr>
+                            <tr><td>Demo problems provided</td>
+                                <td>January, 2017</td></tr>
+                            <tr><td>Initial planner submission</td>
+                                <td>February 18, 2018</td></tr>
+                            <tr><td>Feature stop (final planner submission)</td>
+                                <td>March 18, 2018</td></tr>
+                            <tr><td>Planner Abstract submission deadline</td>
+                                <td>April, 2018</td></tr>
+                            <tr><td>Contest run</td>
+                                <td>April - May, 2018</td></tr>
+                            <tr><td>Results announced</td>
+                                <td>June, 2018</td></tr>
+                            <tr><td>Result analysis deadline</td>
+                                <td>July, 2018</td></tr>
+                        </tbody></table>
+                    </div>
+                </div>
+
+                <div id="tracks" class="row section">
+                    <div class="col-lg-12">
+                        <h2>Tracks</h2>
+
+                        <p>
+                            There are two temporal tracks: 'satisficing'
+                            and 'on board'.  The tracks differ in the amount
+                            of resources available.  The evaluation
+                            criterion is plan quality within the time available.
+                            We encourage participants to enter
+                            their planner in both tracks.
+                        </p>
+
+                        <h3>Satisficing Planning Track</h3>
+                        <ul>
+                            <li>
+                                single CPU core
+                            </li>
+                            <li>
+                                <strong>8Gb</strong> memory limit
+                            </li>
+                            <li>
+                                <strong>30min</strong> time limit
+                            </li>
+                            <li>
+                                Multiple plans can be returned, the one
+                                with the lowest cost is counted.
+                            </li>
+                            <li>
+                                The score of a planner on a solved task
+                                is the <strong>ratio C*/C</strong>
+                                where C is the cost of the cheapest
+                                discovered plan and C* is the cost of a
+                                reference plan. The score on an
+                                unsolved task is 0. The score of a
+                                planner is the sum of its scores for
+                                all tasks.
+                            </li>
+                            <li>
+                                If an invalid plan is returned, all
+                                tasks in the domain are counted as
+                                unsolved.
+                            </li>
+                            <li>
+                                If that happens in more than one
+                                domain, the entry is disqualified.
+                            </li>
+                        </ul>
+                        <h3>On-Board Planning Track</h3>
+                        <ul>
+                            <li>designed as an analogue for on-board planning, for use where the resources available are much less than on a desktop computer;
+                                the time limit is chosen to mock up 30 minutes on low-power hardware</li>
+                            <li>
+                                single CPU core
+                            </li>
+                            <li>
+                                <strong>1Gb</strong> memory limit
+                            </li>
+                            <li>
+                                <strong>2min</strong> time limit
+                            </li>
+                            <li>
+                                Multiple plans can be returned, the one with the lowest cost is counted.
+                            </li>
+                            <li>
+                                Scoring as in the satisficing track.
+                            </li>
+                            <li>
+                                If an invalid plan is returned, all
+                                tasks in the domain are counted as
+                                unsolved.
+                            </li>
+                            <li>
+                                If that happens in more than one
+                                domain, the entry is disqualified.
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div id="pddl" class="row section">
+                    <div class="col-lg-12">
+                        <h2>PDDL Fragment</h2>
+                        <p>
+                            IPC 2018 will use a subset of PDDL 2.2, as
+                            in previous years.  Planners must support the subset of the
+                            language involving STRIPS, durative actions and action costs.
+                            Some domains will additionally require Timed Initial Literals,
+                            and numeric state variables. We will
+                            consider providing alternative domain
+                            definitions where practical.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="registration" class="row section">
+                    <div class="col-lg-12">
+                        <h2>Registration</h2>
+                        <p>
+                            As in previous editions, the competitors
+                            must submit the source code of their
+                            planners that will be run by the organizers
+                            on the actual competition domains/problems,
+                            unknown to the competitors until this time.
+                            This way no fine-tuning of the planners
+                            will be possible.
+                        </p>
+                        <p>
+                            All competitors must submit an abstract
+                            (max. 300 words) and a 4-page paper
+                            describing their planners. After the
+                            competition we encourage the participants
+                            to analyze the results of their planner and
+                            submit an extended version of their
+                            abstract. An important requirement for IPC
+                            2018 competitors is to give the organizers
+                            the right to post their paper and the
+                            source code of their planners on the
+                            official IPC 2018 web site.
+                        </p>
+
+                        <h3>Registration Process</h3>
+                        <p>
+                            We will use the container technology
+                            "Singularity" this year to promote
+                            reproducibility and help with compilation
+                            issues that have caused problems in the
+                            past. More details on Singularity can be
+                            found below.
+                        </p>
+                        <p>
+                            To register your planner create a repository (mercurial and git repositories are accepted)
+                            on <a href="https://bitbucket.org/" target="_blank">bitbucket</a> and give
+                            read access to <a href="https://bitbucket.org/ipc2018-temporal-bot/" target="_blank">ipc2018-temporal-bot</a>. Then
+                            create one branch per track you want to participate in and
+                            name it according to the following list.
+                            </p><ul>
+                                <li>ipc-2018-temp-sat (satisficing track)</li>
+                                <li>ipc-2018-temp-on-board (on board track)</li>
+                            </ul>
+
+                            Up to two versions of the same planner are allowed to
+                            participate. To submit two different versions of the same
+                            planner, simply create two different repositories.
+
+                            In each branch, add a file called
+                            Singularity to the root directory of your
+                            repository. This file is used to bootstrap
+                            a singularity container and to run the
+                            planner (an <a href="https://bitbucket.org/ipc2018-temporal/demo-submission/src/ipc-2018-temp-sat/Singularity?at=ipc-2018-temp-sat" target="_blank"> example</a> can be found
+                            in our demo submission. For more details on
+                            Singularity <a href="https://ipc2018-temporal.bitbucket.io/#singularity">see
+                            below</a>).
+                        <p></p>
+                        <p>
+                            We will build all planners once a day and
+                            run them on a number of test cases. You can
+                            see the results for your planner on the <a href="https://ipc2018-temporal.bitbucket.io/build-status.html" target="_blank">
+                            build status page</a>. Test your
+                            Singularity file locally (see below) and
+                            make sure it passes our automated tests.
+                        </p>
+                        <p>
+                            A planner is officially registered in a
+                            track if it has a green box for that track
+                            on the <a href="https://ipc2018-temporal.bitbucket.io/build-status.html" target="_blank">build status page</a> on
+                            March 18. You can still make any code
+                            changes you want until April 10. The
+                            build status on the website will update
+                            (once a day) when you push new changes the
+                            registered branches.
+                        </p>
+
+                        <h3>Bug fixing policy</h3>
+                        <p>
+                            We will fork your repository on February
+                            20. If you find any bugs in your code
+                            afterwards (or if we detect any while
+                            running your code), you can create a pull
+                            request to our fork with a patch fixing the
+                            bug. Only bug fixes will be accepted after
+                            the deadline (in particular, we will not
+                            accept patches modifying behavior or tuning
+                            parameters).
+                        </p>
+                    </div>
+                </div>
+
+                <div id="singularityfaq" class="row section">
+                    <div class="col-lg-12">
+                        <h2>Details on Singularity</h2>
+                        <p>
+                                In an effort to increase reproducibility and
+                                reduce the effort of running future IPCs, we
+                                are using software containers that contain the
+                                submitted planner and everything required to
+                                run it. We are using <a href="http://singularity.lbl.gov/" target="_blank">
+                                Singularity</a> which is an alternative to the
+                                well-known Docker. Singularity (in contrast to
+                                Docker) is specifically designed for scientific
+                                experiments on HPC clusters and has low
+                                overhead.
+                        </p>
+                        <p>
+                                Singularity containers can be viewed as
+                                light-weight alternatives to virtual machines
+                                that carry a program and all parts of the OS
+                                that are necessary to run it. They can be based
+                                on any docker image. We created an <a href="https://bitbucket.org/ipc2018-temporal/demo-submission" target="_blank"> example submission</a> (<a href="https://bitbucket.org/ipc2018-temporal/demo-submission/src/ipc-2018-seq-opt/Singularity?at=ipc-2018-seq-opt" target="_blank"> Singularity file</a>) that
+                                uses the latest Ubuntu as a basis and uses
+                                apt-get to install required packages for Fast
+                                Downward. It then builds the planner from the
+                                files that are next to the Singularity file in
+                                the repository.
+                        </p>
+                        <p>
+                                In the following, we collect and answer
+                                frequently asked questions about Singularity.
+                                We'll update this section as we get more
+                                questions. If you run into problems using
+                                Singularity and your problem is not answered
+                                here, let us know.
+                        </p>
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                      <a data-toggle="collapse" data-parent="#accordion" href="https://ipc2018-temporal.bitbucket.io/#collapseZero">
+                                          Which version of Singularity will you use?
+                                      </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseZero" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        We will use version 2.4. This version has some new
+                                        features that are useful for our setup. For example,
+                                        the size of the container does not have to be specified
+                                        when building it.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="https://ipc2018-temporal.bitbucket.io/#collapseOne">
+                                        How do I install Singularity on my machine?
+                                    </a></h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                            <p>
+                                                You can install Singularity locally with the
+                                                following commands (See the <a href="http://singularity.lbl.gov/quickstart" target="_blank">
+                                                Singularity quick start guide</a> for more details):
+                                            </p>
+                                              <pre>                                                <code>
+  sudo apt install automake
+  git clone https://github.com/singularityware/singularity.git
+  cd singularity
+  git checkout 2.4
+  ./autogen.sh
+  ./configure --prefix=/usr/local
+  make
+  sudo make install                         </code>
+                                          </pre>
+                                       </div>
+                                  </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="https://ipc2018-temporal.bitbucket.io/#collapseTwo">
+                                        How can I test my containers?
+                                    </a></h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" "="">
+                                    <div class="panel-body">
+                                            <p>
+                                                To test your Singularity script, please install
+                                                Singularity (see above) and run the following
+                                                commands (replacing our demo submission with
+                                                your repository):
+                                            </p>
+                                            <pre>                                              <code>
+   hg clone https://bitbucket.org/ipc2018-temporal/demo-submission -r ipc-2018-temp-sat
+   sudo singularity build planner.img demo-submission/Singularity
+   mkdir rundir
+   cp path/to/domain.pddl rundir
+   cp path/to/problem.pddl rundir
+   RUNDIR="$(pwd)/rundir"
+   DOMAIN="$RUNDIR/domain.pddl"
+   PROBLEM="$RUNDIR/problem.pddl"
+   PLANFILE="$RUNDIR/sas_plan"
+   singularity run -C -H $RUNDIR planner.img $DOMAIN $PROBLEM $PLANFILE</code>
+                                            </pre>
+                                            <p>
+                                                The last command also shows how we will call
+                                                the container during the competition: the
+                                                parameter "-H" mounts the directory containing
+                                                the PDDL files into the file system of the
+                                                container and uses it as the user's home
+                                                directory. The parameter "-C" then isolates the
+                                                container from the rest of the system. Only
+                                                files written to the mounted directory will be
+                                                stored permanently. Other created files (for
+                                                example in /tmp) only persist for the current
+                                                session and are cleaned up afterwards. When
+                                                running the container on two instances at the
+                                                same time, their run directories and sessions
+                                                will be different, so the two runs cannot
+                                                interact. The container itself is read-only
+                                                after its creation.
+                                            </p>
+                                            <p>
+                                                We will also build your code about once per day
+                                                and show the results for all planners on the <a href="https://ipc2018-temporal.bitbucket.io/build-status.html" target="_blank">build
+                                                status page</a>
+                                            </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="https://ipc2018-temporal.bitbucket.io/#collapseThree">
+                                        Can I write temporary files?
+                                    </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Yes but only to certain directories. The runscript of
+                                        your container is started from the home directory of
+                                        the container which is also the directory that contains
+                                        the input files. You have write access to this
+                                        directory and files written here will be persistent.
+                                        However, the home directory will be different in each
+                                        run, so each run will start from the same clean
+                                        container. You also have write access to the directory
+                                        <pre><code>/tmp</code></pre> but files written there
+                                        will be deleted after the run. See the question above
+                                        for how to set up Singularity in this way for testing.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="https://ipc2018-temporal.bitbucket.io/#collapseFour">
+                                        Can my repository be private?
+                                    </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Yes only the Bitbucket user
+                                        <a href="https://bitbucket.org/ipc2018-temporal-bot/" target="_blank">ipc2018-temporal-bot</a>
+                                        needs access. However, the
+                                        <a href="https://ipc2018-temporal.bitbucket.io/build-status.html" target="_blank">
+                                        build status page</a> will show logs for all registered
+                                        planners. We consider this information public.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="https://ipc2018-temporal.bitbucket.io/#collapseFive">
+                                        My container uses a library that requires acquiring a license. What should I do?
+                                    </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFive" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>
+                                        Please contact us if your license does not permit you
+                                        to package the library into the container.
+                                        </p>
+                                        <p>
+                                        If we can acquire a license, we will mount the
+                                        installation files for the library while building the
+                                        container. You can then copy the installation file into
+                                        the container in the <code>%setup</code> step and
+                                        install it in the <code>%post</code> step.
+                                        </p>
+                                        <p>
+                                        We currently have a license for CPLEX and make the
+                                        installer for version 12.7.1 (64 bit) available during
+                                        setup. You can see an example of the installation in
+                                        the <a href="https://bitbucket.org/ipc2018/demo-submission/src/ipc-2018-seq-mul/Singularity?at=ipc-2018-seq-mul" target="_blank">multi-core track</a> of our demo
+                                        submission. For all other libraries, please get in
+                                        touch with us as soon as possible.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="https://ipc2018-temporal.bitbucket.io/#collapseSix">
+                                        Can I put a Singularity file in an empty repository and pull my planner from an existing docker image?
+                                    </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseSix" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        This is technically possible but please don't do this.
+                                        Your submission has to include your source code and
+                                        should be built from that code. For increased
+                                        reproducibility please make your repository as
+                                        self-contained as possible.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="https://ipc2018-temporal.bitbucket.io/#collapseSeven">
+                                        How do I access my code while building the Singularity container?
+                                    </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseSeven" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Our <a href="https://bitbucket.org/ipc2018/demo-submission" target="_blank"> example submission</a> (<a href="https://bitbucket.org/ipc2018/demo-submission/src/ipc-2018-seq-opt/Singularity?at=ipc-2018-seq-opt" target="_blank"> Singularity file</a>) shows how to
+                                        copy your source code into the container. Using the
+                                        same <code>%setup</code> section will copy
+                                        the files from the correct branch into the container.
+                                        In the <code>%post</code> section you can
+                                        then build your planner in the directory
+                                        <tt>/planner</tt>.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="https://ipc2018-temporal.bitbucket.io/#collapseEight">
+                                        I gave <code>ipc2018-temporal-bot</code> access to my repository. Do I have to send you an email about this?
+                                    </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseEight" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        No, we will get an automated notification about this
+                                        and will add you to the list of teams. Your planner
+                                        should show up on the <a href="https://ipc2018-temporal.bitbucket.io/build-status.html" target="_blank">build status page</a> after one or two
+                                        days. If your planner doesn't show up on the build
+                                        status page, or if you have any other questions or
+                                        problems, you are of course welcome to contact us.
+
+                                        Please add the list of authors, name and description of
+                                        the planner and other meta data to your Singularity
+                                        file according to our example <a href="https://bitbucket.org/ipc2018/demo-submission/src/ipc-2018-seq-opt/Singularity?at=ipc-2018-seq-opt" target="_blank"> Singularity file</a>.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="https://ipc2018-temporal.bitbucket.io/#collapseNine">
+                                        Can I use a different OS in the container?
+                                    </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseNine" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        Singularity images can be based on any docker image. We
+                                        used a basic Ubuntu image as the basis of our demo but
+                                        you are welcome to use other images. The Singularity
+                                        image must run on CentOS but most unix-based images
+                                        will work. Windows and OS X are not supported. If you
+                                        are trying to generate a small image, a lightweight OS
+                                        such as <a href="https://alpinelinux.org/">Alpine
+                                        Linux</a> might be an option. However, be aware that
+                                        Alpine Linux uses <a href="https://wiki.musl-libc.org/functional-differences-from-glibc.html">
+                                        musl instead of glibc</a>.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="https://ipc2018-temporal.bitbucket.io/#collapseTen">
+                                        How can I reduce the size of the container?
+                                    </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTen" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        After you compile your planner, you may remove the
+                                        planner source code and packages that are only required
+                                        for building your planner. Our demo submission shows
+                                        this in the <a href="https://bitbucket.org/ipc2018/demo-submission/src/ipc-2018-seq-mul/Singularity?at=ipc-2018-seq-mul" target="_blank">multi-core track</a>.
+                                         <br>
+                                        It is not necessary to reduce the image size as much as
+                                        possible but we appreciate any effort to keep the
+                                        images small.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="https://ipc2018-temporal.bitbucket.io/#collapseEleven">
+                                        What causes the error <code>'Bootstrap' type not supported: docker</code>?
+                                    </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseEleven" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        This can be caused by Windows line endings in the
+                                        Singularity file. The line <code>Bootstrap:
+                                        docker</code> is then parsed as <code>Bootstrap:
+                                        docker\r</code> and not recognized. Using Linux-style
+                                        line endings should fix the issue.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+
+                <div id="inputoutput" class="row section">
+                    <div class="col-lg-12">
+                      <h2>Input/Output Rules</h2>
+                      <p> <b> Input: </b> The runscript specified in the Singularity file should accept 3 parameters (4 in the cost bounded track):</p><pre><code>./runscript &lt;domain&gt; &lt;problem&gt; &lt;plan-output-file&gt; [&lt;cost-bound&gt;]</code></pre>
+
+                      <p> <b> Output: </b> The planner must write the plan file(s) in the location
+                          specified in &lt;plan-output-file&gt;, except in the satisficing track
+                          where plans can also be written in files &lt;plan-output-file&gt;.1,
+                          &lt;plan-output-file&gt;.2, &lt;plan-output-file&gt;.3, etc.
+                      </p>
+
+                      <p> <b> Random Seed: </b> We won't provide any random seed as part of the
+                         input to the planners. However, for the sake of replicability of the
+                         experiments, we ask all participants to fix a random seed and make their
+                         planner behaviour as deterministic as possible.
+                      </p>
+
+                      <p> <b> Optional Log Output: </b> As part as the competition
+                        results we would like to publish detailed data about the
+                        participant planners that helps to understand the
+                        competition results in more detail. For that, we would
+                        like your collaboration in printing some stats about your
+                        planner that can be parsed afterwards. This is completely
+                        optional and we will not rely on this data to determine
+                        the winner.
+
+                        We will parse the following information:
+                        </p><ul>
+                          <li> Time format: all times in the following output are optional and can be given in different formats.
+                          <ul>
+                              <li> Absolute (time passed since the planner started): "[732.736s]" </li>
+                              <li> Relative (relative to last printed time): "[+32.736s]" </li>
+                              <li> Absolute reset (all absolute times afterwards are relative to this time): "[=+732.736s]" </li>
+                          </ul>
+                          </li>
+                          <li> Plan cost bounds: print a line as soon as new lower/upper bound is found
+                          <ul>
+                              <li> "proven lower bound: 124 TIME"</li>
+                              <li> "proven upper bound: 250 TIME"</li>
+                          </ul>
+                          </li>
+                          <li> Portfolio planner techniques: print when a technique
+                              is started/ended (can also be used for preprocess/translate)
+                              and which technique solved the problem
+                          <ul>
+                              <li> "starting technique: NAME TIME" </li>
+                              <li> "technique finished: NAME TIME" </li>
+                              <li> "most useful technique: NAME" </li>
+                          </ul>
+                          </li>
+                          <li> Task size: print statistics on the problem (potentially after preprocessing it)
+                          <ul>
+                              <li> "Translator variables: 62" </li>
+                              <li> "Translator facts: 133"    </li>
+                              <li> "Translator goal facts: 3" </li>
+                              <li> "Translator operators: 358"</li>
+                          </ul>
+                          </li>
+                          <li> Search statistics:
+                          <ul>
+                              <li> "Expanded 85 state(s)." </li>
+                              <li> "Reopened 0 state(s)." </li>
+                              <li> "Evaluated 108 state(s)." </li>
+                              <li> "Evaluations: 108" </li>
+                              <li> "Generated 214 state(s)." </li>
+                              <li> "Dead ends: 0 state(s)." </li>
+                              <li> "Expanded until last jump: 77 state(s)." </li>
+                              <li> "Reopened until last jump: 0 state(s)." </li>
+                              <li> "Evaluated until last jump: 101 state(s)." </li>
+                              <li> "Generated until last jump: 200 state(s)." </li>
+                          </ul>
+                          </li>
+                          <li> Others: Every type of planner has different
+                              relevant data to report and it is impossible for us
+                              to give a complete list of all the attributes that
+                              are relevant. The list above is based on the two
+                              most common kind of planners: portfolios and
+                              heuristic search planners (based on Fast Downward).
+                              However, this list is not closed. If your planner
+                              reports other useful statistics, or they are in a
+                              different format, we would like to parse them as
+                              well. Please, write us an email with a description
+                              of the information that your planner provides in
+                              the logs and, if possible, a Python regular
+                              expression that parses it.
+                          </li>
+                        </ul>
+                      <p></p>
+                    </div>
+                </div>
+
+                <div id="calls" class="row section">
+                      <div class="col-lg-12">
+                          <h2>Calls for Participation and Domains</h2>
+                          <p>Please forward the following calls to all interested parties.</p>
+                          <ul>
+                              <li><a href="https://ipc2018-temporal.bitbucket.io/ipc-2018-cfp.txt" target="_blank">Call for Participation</a></li>
+                              <li><a href="https://ipc2018-temporal.bitbucket.io/ipc-2018-cfd.txt" target="_blank">Call for Domains</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  
+                  <div id="domains" class="row section">
+                    <div class="col-lg-12">
+                        <h2>Domains</h2>
+                        <p>
+                        Nine domains were used in the competition. A
+                        repository containing the PDDL files and the
+                        selected instances on <a href="https://bitbucket.org/ipc2018-temporal/domains" target="_blank">
+                        Bitbucket</a>.
+                        <!--a href="domains.html">separate page</a-->
+                        </p>
+                    </div>
+                </div>
+                  
+                <div id="planners" class="row section">
+                    <div class="col-lg-12">
+                        <h2>Planners</h2>
+                        <p>
+                            4 planners + Optic as a base line participated in the temporal satisficing track. Planner abstracts for each planner are available as a
+                            <a href="https://ipc2018-temporal.bitbucket.io/planner-abstracts/ipc-2018-planner-abstracts-temporal-tracks.pdf" target="_blank">planner abstract booklet</a>
+                            or as individual files linked below.
+                        </p>
+                        <p>
+                            The source code of all entries is publicly available on bitbucket.
+                            To build the planners, follow the instructions in the <a href="https://ipc2018-temporal.bitbucket.io/#singularityfaq">FAQ</a>.
+                            Note that some planners require the LP solver CPLEX to compile.
+                            To build such a planner, acquire a CPLEX license, download the installation files
+                            to the directory <code>/third-party</code> or change that path in the Singularity file.
+                            Since building a singularity image requires root privileges, we recommend building the
+                            image inside a virtual machine. For example, you may use vagrant
+                            <a href="https://www.vagrantup.com/" target="_blank">Vagrant</a> with this
+                            <a href="https://ipc2018-temporal.bitbucket.io/misc/Vagrantfile" download="">Vagrantfile</a>. It expects a directory <code>./input</code>
+                            where the planner is located and an empty directory <code>./output</code> where the image
+                            will be created.
+                        </p>
+                        <p>
+                            Some planners had minor bug fixes after the
+                            competition. We have updated the last version of each planner. 
+                        </p>
+                        <h3>Satisficing Track</h3>
+                        <ul>
+                                <li>
+                                        <strong>CP4TP</strong> (<a href="https://bitbucket.org/ipc2018-temporal/team1/src/" target="_blank">code</a>)<br> by Daniel Furelos-Blanco and Anders Jonsson
+                                        <br>
+                                        (<a href="https://ipc2018-temporal.bitbucket.io/planner-abstracts/team1.pdf" target="_blank">planner abstract</a>)
+                                </li>
+                                <li>
+                                        <strong>TFLAP</strong> (<a href="https://bitbucket.org/ipc2018-temporal/team2/src/" target="_blank">code</a>)<br> by Oscar Sapena Vercher and Eva Onaindia de la Rivaherrera 
+                                        <br>
+                                        (<a href="https://ipc2018-temporal.bitbucket.io/planner-abstracts/team2.pdf" target="_blank">planner abstract</a>)
+                                </li>
+                                <li>
+                                        <strong>TemPorAl</strong> (<a href="https://bitbucket.org/ipc2018-temporal/team3/src/" target="_blank">code</a>)<br> by Isabel Cenamor, Mauro Vallati, Lukas Chrpa, Tomás de la Rosa and Fernando Fernández 
+                                        <br>
+                                        (<a href="https://ipc2018-temporal.bitbucket.io/planner-abstracts/team3.pdf" target="_blank">planner abstract</a>)
+                                </li>
+                                <li>
+                                        <strong>PopCorm</strong> (<a href="https://bitbucket.org/ipc2018-temporal/team4/src/" target="_blank">code</a>)<br> by Emre Savas and Maria Fox and Derek Long
+                                        <br>
+                                        (<a href="https://ipc2018-temporal.bitbucket.io/planner-abstracts/team4.pdf" target="_blank">planner abstract</a>)
+                                </li>
+                                <li>
+                                        <strong>OPTIC</strong> (<a href="https://bitbucket.org/ipc2018-temporal/team5/src/" target="_blank">code</a>)<br> by Andrew Coles and Amanda Coles
+                                        <br>
+                                </li>
+                        </ul>  
+                     </div>
+                </div>
+                
+                <div id="results" class="row section col-section">
+                    <div class="col-lg-12">
+                        <h2>Results</h2>
+                        <p>
+                            The results were presented at the 28th
+                            International Conference on Automated
+                            Planning and Scheduling on June 29 in Delft.
+                            The <a href="https://ipc2018-temporal.bitbucket.io/results/presentation.pdf" target="_blank">presentation slides</a>
+                            of this talk contain additional detail.
+                        </p>
+                        <p>
+                            An <a href="https://ipc2018-temporal.bitbucket.io/scores.html">overview of the
+                            scores</a> is available online.
+                            Detailed results for all planners are
+                            available in two forms: a small repository
+                            per track contains an HTML table and a JSON
+                            file containing the parsed values for all
+                            instances
+                            (satisficing track, on-board planning track).
+                            
+                            If you require more detail about individual
+                            planner runs, the raw logs of all runs
+                            including all meta data generated by our
+                            scripts is available as well:
+                            </p><ul>
+                                <li><a href="https://ipc2018-temporal.bitbucket.io/results/temporal-satisficing-logs.tar.bz2" download="">satisficing track</a> (31 MB unpacks to 531 MB),</li>
+                            </ul>
+                            Even more detailed data that includes files generated by the planner during
+                            runtime are available on request.
+                        <p></p>
+                        <p>Based on these results, we are proudly presenting the following awards.</p>
+
+                        <h3>Satisficing Track</h3>
+                        <ul>
+                            <li>
+                                <strong>Winner:</strong> TemPorAl<br>
+                                by Isabel Cenamor, Mauro Vallati, Lukas Chrpa, Tomás de la Rosa and Fernando Fernández
+                            </li>
+                            <li>
+                                <strong>Runner-Up:</strong> CP4TP<br>
+                                by Daniel Furelos-Blanco and Anders Jonsson
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="organizers" class="row section">
+                      <div class="col-lg-12">
+                          <h3>Organizers</h3>
+                          <ul>
+                              <li><a href="https://nms.kcl.ac.uk/amanda.coles/">Andrew Coles</a> (King's College London)</li>
+                              <li><a href="https://nms.kcl.ac.uk/andrew.coles/">Amanda Coles</a> (King's College London)</li>
+                              <li>Moises Martinez (King's College London)</li>
+                          </ul>
+                          <p></p>
+
+                          <p>
+                              Contact us: <a href="mailto:ipc2018-temporal-organizers@googlegroups.com">ipc2018-temporal-organizers@googlegroups.com</a>
+                          </p>
+
+                      </div>
+                  </div>
+
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="./IPC 2018_files/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./IPC 2018_files/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+
+
+
+</body></html>
